@@ -19,6 +19,7 @@
 // console.log(motel);
 // motel.greet('Vladimir Kriukov');
 // motel.addGuests(223);
+// motel.removeGuests(184);
 // const mango = {
 //     name: 'Mango',
 //     sales: 12,
@@ -31,20 +32,25 @@
 // console.log(mango.sale('laptor'));
 // console.log(mango.sales);
 // Write code under this line
-const Account = function(login, email) {
-    this.login = login;
-    this.email = email;
-};
-Account.prototype.getInfo = function(login, email) {
-    return `login: ${this.login}, email: ${this.email}`;
-};
+// const Account = function(login, email) {
+//     this.login = login;
+//     this.email = email;
+// };
+// Account.prototype.getInfo = function(login, email) {
+//     return `login: ${this.login}, email: ${this.email}`;
+// };
 
-console.log(typeof Account.prototype.getInfo);
-// 'function'
+// console.log(typeof Account.prototype.getInfo);
+// // 'function'
 
-const mango = new Account('Mangozedog', 'mango@dog.woof');
-console.log(mango.getInfo());
-// 'login : Mangozedog, email: mango@dog.woof'
+// const mango = new Account('Mangozedog', 'mango@dog.woof');
+// console.log(mango.getInfo());
+// // 'login : Mangozedog, email: mango@dog.woof'
 
-console.log(poly.getInfo());
-// 'login : Poly, email: poly@mail.com'
+// console.log(poly.getInfo());
+// // 'login : Poly, email: poly@mail.com'
+const animal = { eats: true };
+const dog = Object.create(animal);
+dog.barks = true;
+
+console.log(dog);
