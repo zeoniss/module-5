@@ -49,8 +49,7 @@
 
 // console.log(poly.getInfo());
 // // 'login : Poly, email: poly@mail.com'
-const animal = { eats: true };
-const dog = Object.create(animal);
-dog.barks = true;
-
-console.log(dog);
+const animal = { eats: true }
+const dog = Object.create(animal)
+dog.barks = true
+for (const key in dog) console.log(key)
