@@ -578,7 +578,7 @@
 // console.log(checkFruit('яблоко'))
 function getCommonElements(array1, array2) {
     const result = []
-    for (let i = 0; i < array1.length; i += 1)
+    for (array1 of array2[i])
         if (array1.includes(array2[i])) {
             result.push(array2[i])
         }
