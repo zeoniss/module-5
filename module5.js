@@ -364,17 +364,227 @@
 
 // console.log(checkPassword('jqueryismyjam'))
 // console.log(checkPassword('mangohackzor'))
-function checkForSpam(message) {
-    let result
-        // Пиши код ниже этой строки
-    const normalize = message[0].toUpperCase() + message.slice(1).toLowerCase
-    result =
-        normalize.includes('spam') || normalize.includes('sale') ? true : false
+// function checkForSpam(message) {
+//     let result
+//         // Пиши код ниже этой строки
+//     const normalize = message.toLowerCase()
+//     if (normalize.includes('sale')) {
+//         result = true
+//     }
+//     if (normalize.includes('spam')) {
+//         result = true
+//     }
 
-    // Пиши код выше этой строки
+//     // Пиши код выше этой строки
+//     return result
+// }
+
+// console.log(checkForSpam('Latest technology news'))
+// function checkPassword(password) {
+//     const ADMIN_PASSWORD = 'jqueryismyjam'
+//         // Пиши код ниже этой строки
+
+//     if (password === ADMIN_PASSWORD) {
+//         return `Добро пожаловать!`
+//     }
+//     if (password !== ADMIN_PASSWORD) {
+//         return `Доступ запрещен, неверный пароль!`
+//     }
+// }
+// console.log(checkPassword('mangohackzor'))
+// console.log(checkPassword('polyhax'))
+// console.log(checkPassword('jqueryismyjam'))
+// Write code under this line
+// class Car {
+//     // Write code under this line
+//     static getSpecs(car) {
+//         return `maxSpeed: ${car.maxSpeed}, speed: ${car.speed}, isOn: ${car.isOn}, distance: ${car.distance}, price: ${car.price} `
+//     }
+//     constructor({ maxSpeed, speed = 0, isOn = false, distance = 0, price }) {
+//         this.maxSpeed = maxSpeed
+//         this.speed = speed
+//         this.isOn = isOn
+//         this.distance = distance
+//         this._price = price
+//     }
+//     get price() {
+//         return this._price
+//     }
+//     set price(value) {
+//         this._price = value
+//     }
+//     turnOn() {
+//         this.isOn = true
+//     }
+//     turnOff() {
+//         this.isOn = true
+//         this.speed = 0
+//     }
+//     accelerate(value) {
+//         if (this.speed + value <= this.maxSpeed) {
+//             this.speed += value
+//         } else {
+//             this.speed = this.maxSpeed
+//         }
+//     }
+//     decelerate(value) {
+//         if (this.speed - value > 0) {
+//             this.speed -= value
+//         } else {
+//             this.speed = 0
+//         }
+//     }
+//     drive(hours) {
+//         if (this.isOn) {
+//             this.distance += this.speed * hours
+//         }
+//     }
+// }
+
+// const mustang = new Car({ maxSpeed: 200, price: 2000 })
+// mustang.turnOn()
+// mustang.accelerate(50)
+// mustang.drive(2)
+// Car.getSpecs
+// console.log(Car.getSpecs(mustang));
+// ('maxSpeed: 200, speed: 50, isOn: true, distance: 100, price: 2000')
+
+// mustang.decelerate(20)
+// mustang.drive(1)
+// mustang.turnOff()
+
+// console.log(Car.getSpecs(mustang));
+// ('maxSpeed: 200, speed: 0, isOn: false, distance: 130, price: 2000')
+
+// console.log(mustang.price) // 2000
+// mustang.price = 4000
+// console.log(mustang.price) // 4000
+// function checkStorage(available, ordered) {
+//     // Пиши код ниже этой строки
+//     let message
+
+//     if (ordered === 0) {
+//         return (message = 'В заказе еще нет товаров')
+//     }
+//     if (ordered > available) {
+//         return (message = 'Слишком большой заказ, на складе недостаточно товаров!')
+//     }
+//     return (message = 'Заказ оформлен, с вами свяжется менеджер')
+// }
+// console.log(checkStorage(100, 50))
+// console.log(checkStorage(100, 130))
+// console.log(checkStorage(70, 0))
+// console.log(checkStorage(200, 20))
+// console.log(checkStorage(200, 250))
+// console.log(checkStorage(150, 0))
+// function slugify(title) {
+//     // Пиши код ниже этой строки
+//     const toSplit = title.split(' ')
+//     const slug = toSplit.join('-')
+//     return slug.toLowerCase()
+//         // Пиши код выше этой строки
+// }
+// console.log(slugify('Массивы для новичков'))
+// function makeArray(firstArray, secondArray, maxLength) {
+//     // Пиши код ниже этой строки
+//     const newArray = firstArray.concat(secondArray)
+//     if (newArray.length > maxLength) {
+//         return newArray.slice(0, maxLength)
+//     }
+//     console.log(newArray)
+//         // Пиши код выше этой строки
+// }
+
+// console.log(makeArray(['Манго', 'Поли'], ['Аякс', 'Челси'], 3))
+// console.log(makeArray(['Манго', 'Поли', 'Хьюстон'], ['Аякс', 'Челси'], 4))
+// function calculateTotal(number) {
+//     // Пиши код ниже этой строки
+//     let result
+//     for (let i = 0; i <= number; i += 1) {
+//         return number
+//     }
+
+//     // Пиши код выше этой строки
+// }
+// console.log(calculateTotal(1)) //1
+// console.log(calculateTotal(7)) //28
+// console.log(calculateTotal(18)) //171
+// const start = 3
+// const end = 7
+
+// for (let i = start; i <= end; i += 1) {
+//     // Дополни эту строку
+//     console.log((i = i + i))
+// }
+// const fruits = ['яблоко', 'слива', 'груша', 'апельсин']
+
+// for (let i = 0; i <= fruits.length; i += 1) {
+//     // Дополни эту строку
+//     const fruit = fruits[i] // Дополни эту строку
+//     console.log(fruit)
+// }
+// function findLongestWord(str) {
+//     let strSplit = str.split(' ')
+//     let longestWord = 0
+//     for (let i = 0; i < strSplit.length; i += 1) {
+//         if (strSplit[i].length > longestWord) {
+//             longestWord = strSplit[i].length
+//         }
+//     }
+//     return longestWord
+// }
+// console.log(findLongestWord('The quick brown fox jumped over the lazy dog'))
+// function createArrayOfNumbers(min, max) {
+//     const numbers = []
+//         // Пиши код ниже этой строки
+
+//     for (let i = min; i <= max; i += 1) {
+//         numbers.push[i]
+//         console.log(numbers)
+//             // Пиши код выше этой строки
+//     }
+//     return numbers
+// }
+// console.log(createArrayOfNumbers(14, 17))
+// function filterArray(numbers, value) {
+//     // Пиши код ниже этой строки
+//     const result = []
+//     for (let i = 0; i <= numbers.length; i += 1)
+//         if (numbers[i] > value) {
+//             result.push(numbers[i])
+//         }
+
+//     return result
+//         // Пиши код выше этой строки
+// }
+
+// console.log(filterArray([1, 2, 3, 4, 5], 3))
+// console.log(filterArray([1, 2, 3, 4, 5], 4))
+// console.log(filterArray([1, 2, 3, 4, 5], 5))
+// console.log(filterArray([12, 24, 8, 41, 76], 20))
+// function checkFruit(fruit) {
+//     const fruits = ['яблоко', 'слива', 'груша', 'апельсин']
+
+//     if (fruits.includes(fruit)) {
+//         return true
+//     } else {
+//         return false
+//     } // Дополни эту строку
+// }
+// console.log(checkFruit('слива'))
+// console.log(checkFruit('груша'))
+// console.log(checkFruit('мандарин'))
+// console.log(checkFruit('Груша'))
+// console.log(checkFruit('яблоко'))
+function getCommonElements(array1, array2) {
+    const result = []
+    for (let i = 0; i < array1.length; i += 1)
+        if (array1.includes(array2[i])) {
+            result.push(array2[i])
+        }
     return result
 }
-console.log(checkForSpam('Get rid of sPaM emails. Our book in on sale!'))
-console.log(checkForSpam('Latest technology news'))
-console.log(checkForSpam('JavaScript weekly newsletter'))
-console.log(checkForSpam('Get best sale offers now!'))
+console.log(getCommonElements([1, 2, 3], [2, 4]))
+console.log(getCommonElements([1, 2, 3], [2, 1, 17, 19]))
+console.log(getCommonElements([24, 12, 27, 3], [12, 8, 3, 36, 27]))
+console.log(getCommonElements([10, 20, 30, 40], [4, 30, 17, 10, 40]))
