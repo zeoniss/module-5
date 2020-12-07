@@ -576,15 +576,85 @@
 // console.log(checkFruit('мандарин'))
 // console.log(checkFruit('Груша'))
 // console.log(checkFruit('яблоко'))
-function getCommonElements(array1, array2) {
-    const result = []
-    for (array1 of array2[i])
-        if (array1.includes(array2[i])) {
-            result.push(array2[i])
+// function getCommonElements(array1, array2) {
+//     const result = []
+//     for (let i = 0; i < array2.length; i += 1)
+//         if (array2.includes(array1[i])) {
+//             result.push(array1[i])
+//         }
+//     return result
+// }
+// console.log(getCommonElements([1, 2, 3], [2, 4]))
+// console.log(getCommonElements([1, 2, 3], [2, 1, 17, 19]))
+// console.log(getCommonElements([24, 12, 27, 3], [12, 8, 3, 36, 27]))
+// console.log(getCommonElements([10, 20, 30, 40], [4, 30, 17, 10, 40]))
+// function calculateTotalPrice(order) {
+//     let total = 0
+//     let result
+
+//     // Пиши код ниже этой строки
+
+//     for (result of order) {
+//         total += result
+//     }
+
+//     // Пиши код выше этой строки
+//     return total
+// }
+// console.log(calculateTotalPrice([12, 85, 37, 4]))
+// function filterArray(numbers, value) {
+//     // Пиши код ниже этой строки
+//     const filteredNumbers = []
+
+//     for (const number of numbers) {
+//         if (number > value) {
+//             filteredNumbers.push(number)
+
+//             // Пиши код выше этой строки
+//         }
+//     }
+//     return filteredNumbers
+// }
+// console.log(filterArray([1, 2, 3, 4, 5], 3))
+// console.log(filterArray([1, 2, 3, 4, 5], 4))
+// console.log(filterArray([1, 2, 3, 4, 5], 5))
+// console.log(filterArray([12, 24, 8, 41, 76], 38))
+// function isEven(num) {
+//     return num % 2 === 0
+// }
+// console.log(isEven(3))
+// function fn() {
+//     for (let i = 0; i <= 5; i += 1) {
+//         console.log(i)
+
+//         if (i === 3) {
+//             console.log('Нашли число 3, делаем возврат, прерывая цикл и функцию')
+//             return i
+//         }
+//     }
+
+//     // Этот console.log не выполнится
+//     console.log('Лог после цикла в теле функции')
+// }
+
+// const result = fn()
+// console.log('Лог после выхода из функции')
+// console.log(`Результат выполнения функции ${result}`)
+function includes(array, value) {
+    // Пиши код ниже этой строки
+    let result = false
+    for (let i = 0; i <= array.length; i += 1) {
+        if (array[i] === value) {
+            result = true
+            break
         }
+    }
     return result
+        // Пиши код выше этой строки
 }
-console.log(getCommonElements([1, 2, 3], [2, 4]))
-console.log(getCommonElements([1, 2, 3], [2, 1, 17, 19]))
-console.log(getCommonElements([24, 12, 27, 3], [12, 8, 3, 36, 27]))
-console.log(getCommonElements([10, 20, 30, 40], [4, 30, 17, 10, 40]))
+console.log(includes([1, 2, 3, 4, 5], 3))
+console.log(includes([1, 2, 3, 4, 5], 17))
+console.log(includes(['Земля', 'Марс', 'Венера', 'Юпитер', 'Сатурн'], 'Юпитер'))
+console.log(includes(['Земля', 'Марс', 'Венера', 'Юпитер', 'Сатурн'], 'Уран'))
+console.log(includes(['яблоко', 'слива', 'груша', 'апельсин'], 'слива'))
+console.log(includes(['яблоко', 'слива', 'груша', 'апельсин'], 'киви'))
